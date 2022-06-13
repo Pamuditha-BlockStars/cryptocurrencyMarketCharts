@@ -7,11 +7,12 @@ const criptoPrice = require('../models/AllPriceStore')
 //get All price
 const getCriptoPrice = async (req, res)=> {
 
+    //after 6 second start this funcion 
     setTimeout(async() => {
         //binance API call 
         let ticker = await binance.prices();
 
-        //get price
+        //get prices
         var BTCPrice = ticker.BTCBUSD;
         var BNBPrice = ticker.BNBBUSD;
         var ETHPrice = ticker.ETHBUSD;
@@ -20,6 +21,7 @@ const getCriptoPrice = async (req, res)=> {
             var BNBprice = BNBPrice;
             var ETHprice = ETHPrice;
 
+            //get date
             var date_ob = new Date();
             var date =  date_ob.getDate()+'/'+date_ob.getMonth();
             var time = date_ob.getHours()+':'+date_ob.getMinutes();
@@ -29,7 +31,7 @@ const getCriptoPrice = async (req, res)=> {
         console.log('BNB Price :- ' +BNBPrice+ ' Date :- '+date+ ' Time :- '+time);
         console.log('ETH Price :- ' +ETHPrice+ ' Date :- '+date+ ' Time :- '+time);
 
-        //create object
+        //create objects
         const newbtc = new btc({
             date,
             time,
@@ -56,6 +58,7 @@ const getCriptoPrice = async (req, res)=> {
             ETHprice
         });
 
+        //save details in DB
         newbtc.save().then(() => {
             newbnb.save().then(() => {
                 neweth.save().then(() => {
@@ -70,6 +73,7 @@ const getCriptoPrice = async (req, res)=> {
         
       }, 6000)
 
+    //This function executes in every one hours
      setInterval(async() => {
                //binance API call 
                let ticker = await binance.prices();
@@ -83,6 +87,7 @@ const getCriptoPrice = async (req, res)=> {
                    var BNBprice = BNBPrice;
                    var ETHprice = ETHPrice;
        
+                   //get date
                     var date_ob = new Date();
                     var date =  date_ob.getDate()+'/'+date_ob.getMonth();
                     var time = date_ob.getHours()+':'+date_ob.getMinutes();
@@ -119,6 +124,7 @@ const getCriptoPrice = async (req, res)=> {
                  ETHprice
              });
 
+             //save details in DB
              newbtc.save().then(() => {
                  newbnb.save().then(() => {
                      neweth.save().then(() => {

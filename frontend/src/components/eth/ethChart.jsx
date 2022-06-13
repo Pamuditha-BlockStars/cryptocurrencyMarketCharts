@@ -16,6 +16,7 @@ class EthChart extends React.Component {
         };
     }
 
+    //get ETH prices in DB
     getData(e){
         axios.get('http://localhost:3001/geteth')
             .then(async res => {

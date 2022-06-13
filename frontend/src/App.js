@@ -6,8 +6,9 @@ import MainPage from "./components/MainPage";
 import BtcChart from "./components/btc/btcChart";
 import BnbChart from './components/bnb/bnbChart';
 import EthChart from "./components/eth/ethChart"
-import Background from "./components/MainPage";
 
+
+//create routes
 function App() {
   return (
     <Routes>

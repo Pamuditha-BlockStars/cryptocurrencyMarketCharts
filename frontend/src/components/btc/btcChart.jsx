@@ -17,6 +17,7 @@ class BtcChart extends React.Component {
         };
     }
 
+    //get BTC prices in DB
     getData(e){
              axios.get('http://localhost:3001/getbtc')
                 .then(async res => {

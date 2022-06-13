@@ -6,10 +6,11 @@ const criptoPrice = require('../models/AllPriceStore')
 //get btc prices
 const getBTCPrices = async (req, res) => {
 
+    //get date
     var date_ob = new Date();
     var date =  date_ob.getDate()+'/'+date_ob.getMonth();
 
-    //get data
+    //find data in DB
     await btc.find(
         {
         "date": date
@@ -24,9 +25,11 @@ const getBTCPrices = async (req, res) => {
 //get bnb prices
 const getBNBPrices = async (req, res)=> {
 
+    //get date
     var date_ob = new Date();
     var date =  date_ob.getDate()+'/'+date_ob.getMonth();
 
+    //find data in DB
     await bnb.find(
         {
             "date": date
@@ -41,9 +44,11 @@ const getBNBPrices = async (req, res)=> {
 //get btc prices
 const getETHPrices = async (req, res)=> {
 
+    //get date
     var date_ob = new Date();
     var date =  date_ob.getDate()+'/'+date_ob.getMonth();
 
+    //find data in DB
     await eth.find(
         {
             "date": date
@@ -58,9 +63,11 @@ const getETHPrices = async (req, res)=> {
 //get All prices
 const getAllPrices =  async (req, res)=> {
 
+    //get date
     var date_ob = new Date();
     var date =  date_ob.getDate()+'/'+date_ob.getMonth();
 
+    //find data in DB
     await criptoPrice.find(
         {
             "date": date

@@ -2,21 +2,18 @@ import React, {Component, useEffect} from 'react';
 import { useNavigate } from "react-router-dom";
 import './MainPage.css';
 import axios from "axios";
-import { Helmet } from "react-helmet";
 
 const MainPage = (props) => {
 
+    // call binance API
     useEffect(()=>{
         axios.get('http://localhost:3001/get').then(res => {
-           // await console.log(res);
         }).catch((err)=>{
             console.log(err);
         });
     },[]);
 
     const navigate = useNavigate();
-
-    const BTCclick = () => navigate.push('/btc');
 
         return(
             <div>

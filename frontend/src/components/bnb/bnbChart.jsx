@@ -16,6 +16,7 @@ class BnbChart extends React.Component {
         };
     }
 
+    //get BNB prices in DB
     getData(e){
         axios.get('http://localhost:3001/getbnb')
             .then(async res => {
