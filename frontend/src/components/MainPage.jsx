@@ -20,11 +20,6 @@ const MainPage = (props) => {
 
         return(
             <div>
-                <div>
-                    <Helmet>
-                        <style>{"body {  background-image: url(\"https://helios-i.mashable.com/imagery/articles/04ldy4kWWpLv9ccOUPseqIo/hero-image.fill.size_1248x702.v1647386540.jpg\"); background-repeat: no-repeat; background-size: 100% 120%; }"}</style>
-                    </Helmet>
-                </div>
                 <h2 className='title'> Cryptocurrency Market Range </h2>
             <div className='maindiv'>
                 <div className='row'>

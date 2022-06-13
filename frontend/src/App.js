@@ -11,7 +11,7 @@ import Background from "./components/MainPage";
 function App() {
   return (
     <Routes>
-      <Route path={'/'} element ={<><Background/><MainPage/></>} />
+      <Route path={'/'} element ={<><MainPage/></>} />
       <Route path={'/btc'} element ={<><MainPage/><BtcChart/></>} />
       <Route path={'/bnb'} element ={<><MainPage/><BnbChart/></>} />
       <Route path={'/eth'} element ={<><MainPage/><EthChart/></>} />
