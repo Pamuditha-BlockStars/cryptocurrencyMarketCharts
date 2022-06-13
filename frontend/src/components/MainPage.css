@@ -9,19 +9,13 @@
     padding: 20px;
     margin: auto;
     margin-top: 20px;
-    width: 50%;
+    width: 40%;
     height: auto;
     border: 2px solid white;
     border-radius: 10px;
     background-color: ghostwhite;
     opacity: 0.9;
-}
-
-.mianbut{
-    height: 50px;
-    margin: auto;
-    width: 100%;
-    font-size: 18px;
+    text-align: center;
 }
 
 .Chart{

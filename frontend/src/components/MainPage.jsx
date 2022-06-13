@@ -21,13 +21,13 @@ const MainPage = (props) => {
             <div className='maindiv'>
                 <div className='row'>
                 <div className='col'>
-                    <button type="button" onClick={() => navigate("/btc")} className="btn btn-outline-dark mianbut">BTC Price Range</button>
+                    <button type="button" onClick={() => navigate("/btc")} className="btn btn-outline-dark">BTC Price Range</button>
                 </div>
                 <div className='col'>
-                    <button type="button" onClick={() => navigate("/bnb")} className="btn btn-outline-dark mianbut">BNB Price Range</button>
+                    <button type="button" onClick={() => navigate("/bnb")} className="btn btn-outline-dark">BNB Price Range</button>
                 </div>
                 <div className='col'>
-                    <button type="button" onClick={() => navigate("/eth")} className="btn btn-outline-dark mianbut">ETH Price Range  </button>
+                    <button type="button" onClick={() => navigate("/eth")} className="btn btn-outline-dark">ETH Price Range  </button>
                 </div>
                 </div>
             </div>
