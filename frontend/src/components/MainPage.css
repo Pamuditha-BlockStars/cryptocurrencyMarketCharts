@@ -1,0 +1,38 @@
+.title{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    margin-top:20px;
+    color: white;
+}
+
+.maindiv{
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+    width: 50%;
+    height: auto;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: ghostwhite;
+    opacity: 0.9;
+}
+
+.mianbut{
+    height: 50px;
+    margin: auto;
+    width: 100%;
+    font-size: 18px;
+}
+
+.Chart{
+    margin: auto;
+    margin-top: 70px;
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: ghostwhite;
+    opacity: 0.9;
+}
